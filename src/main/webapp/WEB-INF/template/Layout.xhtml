@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets" >
+
+    <h:head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+        <title><ui:insert name="titulo">StudyMap</ui:insert></title>
+
+        <h:outputStylesheet library="css" name="_all-skins.min.css" />
+        <h:outputStylesheet library="css" name="AdminLTE.min.css" />
+        <h:outputStylesheet library="css" name="bootstrap.min.css" />
+        <h:outputStylesheet library="css" name="sistema.css" />
+    </h:head>
+    <h:body styleClass="hold-transition skin-blue sidebar-mini">
+
+        <div class="wrapper">
+
+            <header class="main-header">
+                <!-- Logo -->
+                <a class="logo">
+                    <span class="logo-mini"><b>S</b>MP</span>
+                    <span class="logo-lg"><b>Study</b>Map</span>
+                </a>
+                <!-- Header Navbar: style can be found in header.less -->
+                <nav class="navbar navbar-static-top">
+                    <!-- Sidebar toggle button-->
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                </nav>
+            </header>
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <li class="header">MENU DE NAVEGAÇÃO</li>
+                        <li>
+                            <h:link outcome="Dashboard">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Dashboard</span>
+                            </h:link>
+                        </li>
+
+                        <li>
+                            <h:link outcome="Hoje">
+                                <i class="fa fa-clock-o"></i>
+                                <span>Hoje</span>
+                            </h:link>
+                        </li>
+
+                        <li>
+                            <h:link outcome="NovaRotina">
+                                <i class="fa fa-calendar"></i>
+                                <span>Rotinas Diárias</span>
+                            </h:link>
+                        </li>
+                        <li>
+                            <h:link outcome="SugestaoVideo">
+                                <i class="fa fa-play"></i>
+                                <span>Vídeos</span>
+                            </h:link>
+                        </li>
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                        <ui:insert name="nomePagina">Dashboard</ui:insert>
+                        <small>Painel de Controle</small>
+                    </h1>
+
+                    <ol class="breadcrumb">
+                        <li><h:link outcome="Dashboard"><i class="fa fa-dashboard"></i> Home</h:link></li>
+                        <li class="active"><ui:insert name="nomePagina">Dashboard</ui:insert></li>
+                    </ol>
+                </section>
+
+                <ui:insert name="conteudo"></ui:insert>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div class="pull-right hidden-xs">
+                    <b>Version</b> 1.1
+                </div>
+                <strong>Copyright; 2017 Jonathan Silva Sousa.</strong> Todos os direitos reservados
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <h:outputScript library="js" name="bootstrap.min.js" />
+        <h:outputScript library="js" name="adminlte.min.js" />
+        <h:outputScript library="js" name="jquery-ui.min.js" />
+        <h:outputScript library="js" name="dashboard.min.js" />
+
+    </h:body>
+</html>
