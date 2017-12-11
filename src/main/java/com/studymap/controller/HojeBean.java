@@ -39,6 +39,7 @@ public class HojeBean implements Serializable {
 
     public void inicializar() {
         listaRotinasDiaria = rotinasDiaria.porDia(hoje);
+        rotinaDiariaSelecionada = new RotinaDiaria();
     }
 
     public void concluirTarefa() {
