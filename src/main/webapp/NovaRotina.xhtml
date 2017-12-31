@@ -34,7 +34,7 @@
 
                                 <p:inputText id="descricao" styleClass="full" value="#{novaRotinaBean.rotinaDiaria.descricao}"/>
                                 <p:calendar id="horaInicial" pattern="HH:mm" timeOnly="true" label="Hora inicial" locale="pt"
-                                            size="16" value="#{novaRotinaBean.horaInicial}"/>
+                                            size="16" value="#{novaRotinaBean.horaInicial}" placeholder="HH:mm"/>
                                 <p:inputText id="duracao" styleClass="full" value="#{novaRotinaBean.rotinaDiaria.duracao}" />
                                 <p:commandButton value="Salvar" action="#{novaRotinaBean.salvar}" process="@this form-nova-rotina" update="messages form-nova-rotina"
                                                  styleClass="full" style="margin: 5px 0px 40px 0px;" />
@@ -68,7 +68,7 @@
                 minuteText: 'Minuto',
                 secondText: 'Segundo',
                 currentText: 'Data Atual',
-                        ampm: false,
+                ampm: false,
                 month: 'Mês',
                 week: 'Semana',
                 day: 'Dia',

@@ -50,7 +50,7 @@
 
                     <h:column>
                         <f:facet name="header">Concluir</f:facet>
-                        <p:commandButton icon="fa fa-check" action="#{hojeBean.concluirTarefa}"
+                        <p:commandButton icon="fa fa-check" action="#{hojeBean.concluirTarefa}" title="Concluir"
                                          process="@this frm:table-rotinas" update="frm frm:table-rotinas frm:messages"
                                          disabled="#{rotinaDiaria.concluida}">
                             <f:setPropertyActionListener value="#{rotinaDiaria}" target="#{hojeBean.rotinaDiariaSelecionada}" />
@@ -62,7 +62,6 @@
                                  process="@this" update="frm:table-rotinas messages"/>
             </h:form>
         </section>
-        <!-- /.content -->
 
     </ui:define>
 </ui:composition>
