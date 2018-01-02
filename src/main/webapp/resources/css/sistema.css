@@ -69,11 +69,9 @@ h1 {
 }
 
 .container-buttons img{
-    width: 80px;
+    width: 80%;
     height: 80px;
-    margin-left: 26%;
-    margin-right: -68px;
-    margin-bottom: 20px;
+    margin-left: 10%;
 }
 
 .container-buttons h4 {

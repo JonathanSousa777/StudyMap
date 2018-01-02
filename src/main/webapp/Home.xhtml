@@ -16,13 +16,17 @@
                     <h:form>
                         <h:graphicImage library="images" name="robo.png" styleClass="image-robo" />
                         <h3>Olá Jonathan, está realmente preparado para estudar?</h3>
-                        <div class="container-buttons">
-                            <p:link outcome="SugestaoVideo">
-                                <h:graphicImage library="images" name="positivo.png" title="Sim"/>
-                            </p:link>
-                            <p:commandLink action="#{sugestaoVideoBean.negar}" update="messages">
-                                <h:graphicImage library="images" name="negativo.png" title="Não"/>
-                            </p:commandLink>
+                        <div class="col-sm-12 container-buttons">
+                            <div class="col-sm-6 col-xs-6">
+                                <p:link outcome="SugestaoVideo">
+                                    <h:graphicImage library="images" name="positivo.png" title="Sim"/>
+                                </p:link>
+                            </div>
+                            <div class="col-sm-6 col-xs-6">
+                                <p:commandLink action="#{sugestaoVideoBean.negar}" update="messages" >
+                                    <h:graphicImage library="images" name="negativo.png" title="Não"/>
+                                </p:commandLink>
+                            </div>
                         </div>
                     </h:form>
                 </div>
