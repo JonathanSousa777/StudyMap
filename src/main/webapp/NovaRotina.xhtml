@@ -14,33 +14,36 @@
             <h3 style="text-align: center">Nova Rotina Diária</h3>
 
             <div class="row">
-                <div class="col-xs-12 col-lg-6 col-lg-offset-3">
+                <div class="col-xs-12 col-lg-4 col-lg-offset-4">
                     <p:messages id="messages" />
 
                     <h:panelGrid id="panel-nova-rotina" columns="2" cellpadding="2" cellspacing="2" >
                         <h:form id="form-nova-rotina">
-                            <div class="col-lg-5 col-sm-5 col-xs-5">
-                                <p:outputLabel value="Dia:" styleClass="col-md-12 col-sm-12"/>
-                                <p:outputLabel value="Descrição:" for="descricao" styleClass="col-md-12 col-sm-12"/>
-                                <p:outputLabel value="Hora inicial:" for="horaInicial" styleClass="col-md-12 col-sm-12"/>
-                                <p:outputLabel value="Duração(min):" for="duracao" styleClass="col-md-12 col-sm-12"/>
-                            </div>
-                            <div class="col-lg-7 col-sm-7 col-xs-7">
-                                <h:selectOneMenu styleClass="full" value="#{novaRotinaBean.rotinaDiaria.diaSemana}">
+                            <h:panelGrid columns="2" cellpadding="" cellspacing="0">
+                                <p:outputLabel value="Dia:" for="diaSemana"/>
+                                <h:selectOneMenu value="#{novaRotinaBean.rotinaDiaria.diaSemana}" id="diaSemana" styleClass="full">
                                     <f:selectItem itemValue="Selecione um dia..." />
                                     <f:selectItems value="#{novaRotinaBean.todosDiasSemana}" var="diaSemana" itemValue="#{diaSemana}"
                                                    itemLabel="#{diaSemana.descricao}"/>
                                 </h:selectOneMenu>
 
-                                <p:inputText id="descricao" styleClass="full" value="#{novaRotinaBean.rotinaDiaria.descricao}"/>
-                                <p:calendar id="horaInicial" pattern="HH:mm" timeOnly="true" label="Hora inicial" locale="pt"
+                                <p:outputLabel value="Descrição:" for="descricao" />
+                                <p:inputText id="descricao" value="#{novaRotinaBean.rotinaDiaria.descricao}"/>
+
+                                <p:outputLabel value="Hora inicial:" for="horaInicial" />
+                                <p:calendar id="horaInicial" pattern="HH:mm" timeOnly="true" label="Hora inicial" locale="pt" styleClass="full"
                                             size="16" value="#{novaRotinaBean.horaInicial}" placeholder="HH:mm"/>
-                                <p:inputText id="duracao" styleClass="full" value="#{novaRotinaBean.rotinaDiaria.duracao}" />
+
+                                <p:outputLabel value="Duração(min):" for="duracao" />
+                                <p:inputText id="duracao" value="#{novaRotinaBean.rotinaDiaria.descricao}"/>
+
+                                <br/>
                                 <p:commandButton value="Salvar" action="#{novaRotinaBean.salvar}" process="@this form-nova-rotina" update="messages form-nova-rotina"
                                                  styleClass="full" style="margin: 5px 0px 40px 0px;" />
-                            </div>
+                            </h:panelGrid>
                         </h:form>
                     </h:panelGrid>
+
                 </div>
             </div>
         </section>
